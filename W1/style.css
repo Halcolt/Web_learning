@@ -15,8 +15,6 @@ body {
   margin: 0;
 }
 
-
-
 /*-------------  header ------------- */
 .header-container {
   border-top: solid 10px #c40a0a;
@@ -232,7 +230,7 @@ body {
 .drop div:hover {
   display: block;
   background-color: #dfdedb;
-  color: #9c1010;
+  color: red;
   cursor: pointer;
 }
 .none-border {
@@ -260,7 +258,7 @@ body {
   text-align: center;
   font-size: 14px;
   font-weight: 600;
-  /* color: #9c1010; */
+  
   color: red;
   text-transform: uppercase;
   margin: 0 20px 0px 20px;
@@ -279,7 +277,7 @@ body {
   font-family: "Times New Roman", Times, serif;
   font-size: 14px;
   font-weight: bold;
-  /* color: #8c1515; */
+
   color: red;
   vertical-align: middle;
   line-height: 2em;
@@ -293,7 +291,6 @@ body {
 }
 .info-content-body {
   font-family: "Arimo", sans-serif;
-  /* font: 16px; */
   font-size: 16px;
   color: #343434;
   font-weight: 400;
@@ -304,7 +301,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* margin: auto; */
+
 }
 .info-content-body em {
   font-family: "Times New Roman", Times, serif;

@@ -29,6 +29,7 @@
         <div class="nav-block">
           <!-- Tiêu đề -->
           <div class="nav-block-title">
+            <!-- Block 1 -->
             <div class="avatar">
               <img
                 src="./public/avatar.jpg"
@@ -52,6 +53,7 @@
           <div class="nav-block-content">Xác nhận khai báo y tế</div>
         </div>
 
+        <!-- Block 2 -->
         <div class="nav-block">
           <!-- Tiêu đề -->
           <div class="nav-block-title">QUẢN LÝ HỒ SƠ SINH VIÊN</div>
@@ -61,6 +63,7 @@
           <div class="nav-block-content">Thông tin lớp sinh viên</div>
         </div>
 
+        <!-- Block 3 -->
         <div class="nav-block">
           <!-- Tiêu đề -->
           <div class="nav-block-title"><span>ĐÀO TẠO</span></div>
@@ -152,7 +155,7 @@
             <div>
               <div class="info-content-title-text">
                 <p style="display: inline-block">THÔNG TIN SINH VIÊN &nbsp;</p>
-                <a style="border: none" href="editInfo.html">
+                <a style="border: none" href="edit.html">
                   <i
                     class="fa fa-pencil-square-o"
                     aria-hidden="true"
@@ -171,39 +174,31 @@
               <img src="./public/avatar.jpg" alt="avatar" />
               <p>
                 <em style="font-size: 18px">MSSV</em> :
-                <strong style="font-size: 18px">20200559</strong>
+                <strong style="font-size: 18px">20205219</strong>
               </p>
             </div>
             <div class="col-4">
               <span>
-                <em>Họ và tên</em> &nbsp; :<strong id="name">
-                  Trịnh Phú Quang </strong
-                ><br />
-                <em>Năm vào trường</em> &nbsp; :<strong id="year"> 2020</strong>
+                <em>Họ và tên</em> &nbsp; :<strong id="name"> </strong><br />
+                <em>Năm vào trường</em> &nbsp; :<strong id="year"> </strong>
                 <br />
-                <em>Bậc đào tạo</em> &nbsp; :
-                <strong id="lever">KSCLC-TN-TT-VN-ICT</strong><br />
-                <em>Chương trình</em> &nbsp; :<strong id="programming">
-                  Công nghệ thông tin Việt-Pháp 2020</strong
+                <em>Bậc đào tạo</em> &nbsp; : <strong id="lever"></strong><br />
+                <em>Chương trình</em> &nbsp; :<strong id="programming"> </strong
                 ><br />
-                <em>Khoa/Viện quản lý</em> &nbsp; :<strong id="faculty"
-                  >Trường công nghệ Thông tin <br />và Truyền thông </strong
+                <em>Khoa/Viện quản lý</em> &nbsp; :<strong id="faculty">
+                  <br /> </strong
                 ><br />
                 <em>Tình trạng học tập</em> &nbsp; :
-                <strong id="status">Học</strong> <br />
+                <strong id="status"></strong> <br />
               </span>
             </div>
             <div class="col-4">
               <span>
-                <em>Giới tính</em> &nbsp; : <strong id="sex">Nam</strong> <br />
-                <em>Lớp</em> &nbsp; :
-                <strong id="classes">Công nghệ thông tin Việt-Pháp 2020</strong
-                ><br />
-                <em>Khóa học</em> &nbsp; : <strong id="course">65</strong>
+                <em>Giới tính</em> &nbsp; : <strong id="sex"></strong> <br />
+                <em>Lớp</em> &nbsp; : <strong id="classes"> </strong><br />
+                <em>Khóa học</em> &nbsp; : <strong id="course"></strong>
                 <br />
-                <em>Email</em> &nbsp; :<strong id="email"
-                  >quang.tp205219@sis.hust.edu.vn</strong
-                ><br />
+                <em>Email</em> &nbsp; :<strong id="email"> </strong><br />
               </span>
             </div>
           </div>
@@ -290,5 +285,53 @@
         </p>
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to retrieve data from Local Storage with a fallback to default values
+        function getData(key, defaultValue) {
+          const storedValue = localStorage.getItem(key);
+          return storedValue ? storedValue : defaultValue;
+        }
+
+        // Update elements with retrieved or default values
+        document.getElementById("name").textContent = getData(
+          "newName",
+          "Trịnh Phú Quang"
+        );
+        document.getElementById("year").textContent = getData(
+          "newYear",
+          "2020"
+        );
+        document.getElementById("lever").textContent = getData(
+          "newLevel",
+          "KSCLC-TN-TT-VN-ICT"
+        );
+        document.getElementById("programming").textContent = getData(
+          "newProgramming",
+          "Công nghệ thông tin Việt-Pháp 2020"
+        );
+        document.getElementById("faculty").textContent = getData(
+          "newFaculty",
+          "Trường công nghệ Thông tin và Truyền thông"
+        );
+        document.getElementById("status").textContent = getData(
+          "newStatus",
+          "Học"
+        );
+        document.getElementById("sex").textContent = getData("newSex", "Nam");
+        document.getElementById("classes").textContent = getData(
+          "newClasses",
+          "Công nghệ thông tin Việt-Pháp 2020"
+        );
+        document.getElementById("course").textContent = getData(
+          "newCourse",
+          "65"
+        );
+        document.getElementById("email").textContent = getData(
+          "newEmail",
+          "quang.tp205219@sis.hust.edu.vn"
+        );
+      });
+    </script>
   </body>
 </html>

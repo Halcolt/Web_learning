@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chỉnh sửa thông tin sinh viên</title>
+    <link rel="stylesheet" href="styleInfo.css" />
+  </head>
+
+  <body>
+    <div class="header">Chỉnh sửa thông tin sinh viên</div>
+
+    <form class="body" method="post" id="infoForm" action="/index.html">
+      <div class="col-1" id="form">
+        <span>
+          <div class="body-left">
+            <label for="name">Họ và tên <small style="color: red"></small></label> &nbsp; :  
+            <input id="names" type="text"></input><br />
+          </div>
+          <div class="body-left">
+            <label for="year">Năm vào trường <small style="color: red"></small></label> &nbsp; : 
+            <select id="years" name="year" form="infoForm" class="body-select">
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+              <option value="2011">2011</option>
+              <option value="2010">2010</option>
+              <option value="2009">2009</option>
+              <option value="2008">2008</option>
+              <option value="2007">2007</option>
+              <option value="2006">2006</option>
+              <option value="2005">2005</option>
+              <option value="2004">2004</option>
+              <option value="2003">2003</option>
+              <option value="2002">2002</option>
+              <option value="2001">2001</option>
+              <option value="2000">2000</option>
+            </select>
+            <br />
+          </div>
+          <div class="body-left"> 
+            <label for="level">Bậc đào tạo <small style="color: red"></small></label> &nbsp; :  
+            <input name="level" id="levels" type="text"></input><br />
+          </div>
+          <div class="body-left">
+            <label for="programming">Chương trình <small style="color: red"></small></label> &nbsp; :  
+            <input id="programmings" type="text"></input><br />
+          </div>
+          <div class="body-left">
+            <label for="faculty">Khoa/Viện quản lý <small style="color: red"></small></label> &nbsp; :  
+            <input id="facultys" type="text"></input><br />
+          </div>
+        </span>
+      </div>
+      <div class="col-2" id="form">
+          <span>
+          <div class="body-right">
+            <label for="status">Tình trạng học tập <small style="color: red"></small></label> &nbsp; :  
+            <select name="status" id="statuss" form="infoForm" class="body-select">
+              <option>Học</option>
+              <option>Thôi học</option>
+              <option>Tốt nghiệp</option>
+            </select>
+            <br />
+          </div>
+          <div class="body-right">
+            <label for="sex">Giới tính <small style="color: red"></small></label> &nbsp; :  
+            <select name="sex" id="sexs" form="infoForm" class="body-select">
+              <option>Nam</option>
+              <option>Nữ</option>
+            </select>
+            <br />
+          </div>
+          <div class="body-right">
+            <label for="classes">Lớp <small style="color: red"></small></label> &nbsp; :  
+            <input id="classess" type="text"></input><br />
+          </div>
+          <div class="body-right">
+            <label for="course">Khóa học <small style="color: red"></small></label> &nbsp; :  
+            <input id="courses" type="text"></input> <br />
+          </div>
+          <div class="body-right">
+            <label for="email">Email <small style="color: red"></small></label> &nbsp; :  
+            <input id="emails" type="text"></input><br />
+          </div>
+          </span>
+      </div>
+      
+      <div class="col-3">      
+        <button type="button" id="submmit">OK</button>
+        <button><a href="index.html">Cancel</a></button>
+      </div>
+    </form>
+    
+    <div class="note"><strong style="text-decoration: underline;">Chú ý:</strong> Khi không thay đổi, không bấm OK vì giá trị sẽ bị cập nhật thành giá trị mặc định.
+      <br/>Bấm 'OK' để thay đổi thông tin . 'Cancel' để về trang chủ (thông tin không được thay đổi)</div>
+
+      <script>
+        document.getElementById('submmit').addEventListener('click', function () {
+        // Get the input values
+        const newName = document.getElementById('names').value;
+        const newYear = document.getElementById('years').value;
+        const newLevel = document.getElementById('levels').value;
+        const newProgramming = document.getElementById('programmings').value;
+        const newFaculty = document.getElementById('facultys').value;
+        const newStatus = document.getElementById('statuss').value;
+        const newSex = document.getElementById('sexs').value;
+        const newClasses = document.getElementById('classess').value;
+        const newCourse = document.getElementById('courses').value;
+        const newEmail = document.getElementById('emails').value;
+
+        // Store the updated values in localStorage
+        localStorage.setItem('newName', newName);
+        localStorage.setItem('newYear', newYear);
+        localStorage.setItem('newLevel', newLevel);
+        localStorage.setItem('newProgramming', newProgramming);
+        localStorage.setItem('newFaculty', newFaculty);
+        localStorage.setItem('newStatus', newStatus);
+        localStorage.setItem('newSex', newSex);
+        localStorage.setItem('newClasses', newClasses);
+        localStorage.setItem('newCourse', newCourse);
+        localStorage.setItem('newEmail', newEmail);
+
+        window.location.href = 'index.html';
+      });
+      </script>
+
+  </body>
+</html>
